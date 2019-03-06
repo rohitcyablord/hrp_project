@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class CashOut extends AppCompatActivity {
+public class CashOutActivity extends AppCompatActivity {
     private ImageView menu2;
     private FragmentManager fm;
     private Button edtbtn, cnfbtn;

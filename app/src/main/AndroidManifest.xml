@@ -13,25 +13,25 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/LoginTheme">
-        <activity android:name=".Registeration"></activity>
+        <activity android:name=".RegisterationActivity"></activity>
         <activity
             android:name=".LandingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
-            android:name=".CashOut"
+            android:name=".CashOutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
-            android:name=".EditProfile"
+            android:name=".EditProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
-            android:name=".AddFollower"
+            android:name=".AddFollowerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
-            android:name=".User_home"
+            android:name=".User_homeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
@@ -40,7 +40,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
-            android:name=".Login"
+            android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />

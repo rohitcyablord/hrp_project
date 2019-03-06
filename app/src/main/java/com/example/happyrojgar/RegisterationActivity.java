@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class Registeration extends AppCompatActivity {
+public class RegisterationActivity extends AppCompatActivity {
     private ImageView back_arrow;
     private Button next_btn;
     private TextInputEditText nm_of_sponsor,email_of_sponsor, otp;

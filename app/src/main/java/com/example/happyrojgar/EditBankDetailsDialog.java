@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class EditBankDetails extends DialogFragment {
+public class EditBankDetailsDialog extends DialogFragment {
     private TextInputEditText nm_of_acc, acc_no,cnf_acc_no, ifsc, pass;
     private TextView hrp_amt;
     private Button btn1;
 
-    public EditBankDetails() {
+    public EditBankDetailsDialog() {
         // Required empty public constructor
     }
 

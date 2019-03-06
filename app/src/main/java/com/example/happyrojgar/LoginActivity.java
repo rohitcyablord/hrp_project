@@ -22,7 +22,7 @@ import org.json.JSONObject;
 
 import java.util.Objects;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private ImageView b1;
     private Context context;
     private Button lgn_btn;

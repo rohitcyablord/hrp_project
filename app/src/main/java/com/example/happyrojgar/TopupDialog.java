@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class Topup extends DialogFragment {
+public class TopupDialog extends DialogFragment {
 
     private TextInputEditText acc_nm, usr_nm, amt, commision, pass;
     private Button btn;
 
-    public Topup(){
+    public TopupDialog(){
 
     }
 

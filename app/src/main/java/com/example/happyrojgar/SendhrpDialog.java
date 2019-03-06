@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Sendhrp extends DialogFragment {
+public class SendhrpDialog extends DialogFragment {
     private TextInputEditText acc_nm,usr_nm, amt, pass;
     private Button btn1;
     private TextView hrp_amt;
 
-    public Sendhrp(){ }
+    public SendhrpDialog(){ }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
