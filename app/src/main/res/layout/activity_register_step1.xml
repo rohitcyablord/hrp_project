@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height = "match_parent"
+    tools:context=".Register_step1">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/navbar"
+        android:textAlignment="center"
+        android:text="@string/activity_register_step1_text1"
+        style="@style/logtext"
+        android:layout_marginTop="20sp"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_below="@+id/text"
+        android:textAlignment="center"
+        android:text="@string/activity_register_step1_text2"
+        style="@style/basic"
+        android:textColor="@color/text" />
+
+    <LinearLayout
+        style="@style/basic"
+        android:orientation="vertical"
+        android:padding="@dimen/standard_padding_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/standard_margin_size">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info1"
+                android:hint="@string/activity_register_step1_info1"
+                style="@style/basic"
+                android:textColor="@color/text"
+                android:background="@drawable/back"
+                android:padding="@dimen/standard_input_padding"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info2"
+                android:hint="@string/activity_register_step1_info2"
+                style="@style/basic"
+                android:textColor="@color/text"
+                android:background="@drawable/back"
+                android:padding="@dimen/standard_input_padding"
+                android:textSize="@dimen/standard_text_size"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info3"
+                android:hint="@string/activity_register_step1_info3"
+                style="@style/basic"
+                android:textColor="@color/text"
+                android:background="@drawable/back"
+                android:padding="@dimen/standard_input_padding"
+                android:textSize="@dimen/standard_text_size"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_register_btn"
+        android:background="@color/log"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/standard_margin_size" />
+
+</RelativeLayout>

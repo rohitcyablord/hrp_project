@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height = "match_parent"
+    android:background="@drawable/dialog_border"
+    tools:context=".Sendhrp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/hrp_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/standard_padding_size"
+        android:layout_margin="@dimen/standard_margin_size">
+
+        <TextView
+            android:id="@+id/title_hrp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title__hrp_text"
+            android:textAlignment="center"
+            android:textColor="@color/log"
+            android:textSize="@dimen/standard_heading_size"
+            android:layout_weight="0.2"
+            android:padding="@dimen/standard_layout_padding"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/logbtn"
+            android:padding="@dimen/standard_margin_size"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:layout_marginTop="@dimen/standard_margin_size">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/info1"
+                    android:hint="@string/acc_nm1"
+                    android:text="@string/acc_nm"
+                    style="@style/basic"
+                    android:textColor="@color/text"
+                    android:padding="@dimen/standard_input_padding"
+                    android:textSize="@dimen/standard_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/logbtn"
+            android:layout_weight="0.1"
+            android:padding="@dimen/standard_margin_size"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:layout_marginTop="@dimen/standard_margin_size">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/info2"
+                    android:hint="@string/usr_nm1"
+                    android:text="@string/usr_nm"
+                    style="@style/basic"
+                    android:textColor="@color/text"
+                    android:padding="@dimen/standard_input_padding"
+                    android:textSize="@dimen/standard_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/logbtn"
+            android:padding="@dimen/standard_margin_size"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:layout_marginTop="@dimen/standard_margin_size"
+            android:layout_weight="0.1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/info3"
+                    android:hint="@string/amt_txt1"
+                    android:text="@string/amnt_txt"
+                    style="@style/basic"
+                    android:textColor="@color/text"
+                    android:padding="@dimen/standard_input_padding"
+                    android:textSize="@dimen/standard_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/logbtn"
+            android:padding="@dimen/standard_margin_size"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:layout_marginTop="@dimen/standard_margin_size"
+            android:layout_weight="0.1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/info4"
+                    android:hint="@string/pass_text1"
+                    android:text="@string/pass_text"
+                    style="@style/basic"
+                    android:textColor="@color/text"
+                    android:padding="@dimen/standard_input_padding"
+                    android:textSize="@dimen/standard_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0.2"
+            android:padding="@dimen/standard_margin_size"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:layout_marginTop="@dimen/standard_margin_size">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/add_follower_btm_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cst_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/standard_text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amnt_txt"
+                    android:textAlignment="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/standard_amt_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hrp_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/standard_text_size"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cfm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluebtn"
+            android:text="@string/cnf_btn_text"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/standard_margin_size"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:layout_marginTop="@dimen/standard_margin_size"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<resources>
+    <!-- Titles -->
+    <string name="app_name">Happy Rozgar</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title__hrp_text">Send HRP</string>
+    <string name="tpup_title">TOPUP</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="title">Home</string>
+    <string name="title_menu_btn">Add Follower</string>
+    <!--landing_page strings-->
+    <string name="home1">Spread </string>
+    <string name="home11">Happiness</string>
+    <string name="home2">There are many opportunity that may have come but this is the best one of them.</string>
+    <string name="log">Login</string>
+    <string name="join">Join</string>
+
+    <!--activity login strings-->
+    <string name="login_activity_text">Login</string>
+    <string name="activity_text2">Email</string>
+    <string name="activity_text3">Password</string>
+
+    <!--register activity step 1 strings-->
+    <string name="activity_register_step1_info1">Name of sponsor</string>
+    <string name="activity_register_step1_info2">Email of sponsor</string>
+    <string name="activity_register_step1_info3">OTP</string>
+    <string name="activity_register_step1_text1">step 1/3</string>
+    <string name="activity_register_step1_text2">Sponsor Details</string>
+
+    <!--register activity step 3 strings-->
+    <string name="activity_register_text1">Complete Registration Process</string>
+    <string name="activity_register_text">step 3/3</string>
+    <string name="activity_register_text2">Bank Information</string>
+    <string name="activity_register_info1">Name On Account</string>
+    <string name="activity_register_info2">Type Of Account</string>
+    <string name="activity_register_info3">Account Number</string>
+    <string name="activity_register_info4">Confirm Account Number</string>
+    <string name="activity_register_info5">IFSC</string>
+    <string name="activity_register_btn">Next Step</string>
+    <string name="title_activity_register_step1">register_step1</string>
+    <string name="title_activity_add_follower">add_follower</string>
+
+    <!--add follower activity string-->
+
+    <string name="add_follower_input1">Email</string>
+    <string name="add_follower_input2">Sponsor Email</string>
+    <string name="add_follower_input3">Password for User</string>
+    <string name="add_follower_input4">DOB</string>
+    <string name="add_follower_input5">Gender</string>
+    <string name="add_follower_input6">Password</string>
+    <string name="add_btn">add</string>
+
+    <!--fragment send hrp strings-->
+    <string name="acc_nm">Sarita Jadhav</string>
+    <string name="acc_nm1">Account Name</string>
+    <string name="usr_nm">Sarita</string>
+    <string name="usr_nm1">User Name</string>
+    <string name="amnt_txt">300</string>
+
+    <!--topup fragment strings-->
+
+    <string name="acc_nm_text">Sarita Jadhav</string>
+    <string name="usr_nm_text">Sarita</string>
+    <string name="amt_txt">300</string>
+    <string name="amt_txt1">Amount</string>
+    <string name="cmsn_text">30</string>
+    <string name="cmsn_text1">Commision</string>
+    <string name="pass_text">****</string>
+    <string name="pass_text1">Password</string>
+    <string name="cst_text">Cost</string>
+    <string name="amt_text">300</string>
+    <string name="hrp_text">HRP</string>
+    <string name="cnf_btn_text">Confirm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--edit profile strings-->
+    <string name="edit_usr_nm">Ram Lal</string>
+    <string name="edit_usr_id">ramlal@gmail.com</string>
+    <string name="btn_title">Save</string>
+    <string name="acc_dtl_ttl">Account Holder Name</string>
+    <string name="acc_typ_txt">Account Type</string>
+    <string name="acc_typ">Saving</string>
+    <string name="edt_btn_ttl">Edit</string>
+    <string name="edt_pro_amt">1500</string>
+    <string name="acc_lst_dgt">4567</string>
+
+    <!--edit bank details strings-->
+    <string name="edt_bk_dtl">Edit Bank Details</string>
+    <string name="edt_acc_nm">Name of Account</string>
+    <string name="acc_no">1234-567-876</string>
+    <string name="acc_no1">Acc No.</string>
+    <string name="cnf_acc_no">1234-567-876</string>
+    <string name="cnf_acc_no1">Confirm Acc No.</string>
+    <string name="edt_ifsc">SBI76</string>
+
+    <!--cash out string-->
+    <string name="csh_ttl">Cash Out</string>
+    <string name="csh_btn">Confirm and Schedule Payment</string>
+    <string name="lst_dgt">4567</string>
+    <string name="inp_amt">Enter Amount</string>
+    <string name="csh_out_amt">123.00</string>
+    <string name="trans_fee_text">Transaction Fee(1.2%)</string>
+    <string name="trans_fee">3.00</string>
+    <string name="ttl_csh_out">TOTAL Cash Out</string>
+    <string name="ttl_csh_out_amt">420.00</string>
+
+    <!--user home strings-->
+
+    <string name="sponsor_nm">Sponsor name here</string>
+    <string name="amt1">21K</string>
+    <string name="amt2">22K</string>
+    <string name="amt3">23K</string>
+    <string name="amt4">24K</string>
+    <string name="amt5">25K</string>
+    <string name="level1">level1</string>
+    <string name="level2">level2</string>
+    <string name="level3">level3</string>
+    <string name="level4">level4</string>
+    <string name="level5">level5</string>
+    <string name="more_opt">More Options</string>
+    <string name="tran_his">Transaction History</string>
+    <string name="topup">Topup</string>
+    <string name="trans_hrp">Transfer HRP</string>
+    <string name="balance_1">Balance</string>
+    <string name="bal_amt">1500 hrp</string>
+</resources>

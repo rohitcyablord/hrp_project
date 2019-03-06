@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/logtext"
+        android:layout_below="@id/navbar"
+        android:layout_marginTop="@dimen/standard_layout_padding"
+        android:text="@string/activity_register_text"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/text2"
+        style="@style/basic"
+        android:layout_below="@+id/text"
+        android:layout_marginBottom="@dimen/activity_register_margin_btm"
+        android:text="@string/activity_register_text2"
+        android:textAlignment="center"
+        android:textColor="@color/text" />
+
+    <LinearLayout
+        style="@style/basic"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/standard_margin_size"
+        android:orientation="vertical"
+        android:padding="@dimen/standard_input_padding">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info1"
+                style="@style/basic"
+                android:background="@drawable/back"
+                android:hint="@string/activity_register_info1"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/text"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info2"
+                style="@style/basic"
+                android:background="@drawable/back"
+                android:hint="@string/activity_register_info2"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/text"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info3"
+                style="@style/basic"
+                android:background="@drawable/back"
+                android:hint="@string/activity_register_info3"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/text"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info4"
+                style="@style/basic"
+                android:background="@drawable/back"
+                android:hint="@string/activity_register_info4"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/text"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/info5"
+                style="@style/basic"
+                android:background="@drawable/back"
+                android:hint="@string/activity_register_info5"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/text"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/log"
+        android:text="@string/activity_register_btn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/standard_text_size" />
+
+</RelativeLayout>

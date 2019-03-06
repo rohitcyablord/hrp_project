@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2699FB</color>
+    <color name="colorPrimaryDark">#006cc7</color>
+    <color name="colorAccent">#000000</color>
+    <color name="log">#2699FB</color>
+    <color name="white">#fff</color>
+    <color name="text">#2699FB</color>
+    <color name="back">#F7F7F7</color>
+    <color name="back_color">#F1F9FF</color>
+    <color name="trans_color">#F0856C</color>
+    <color name="topup">#749AB5</color>
+    <color name="text1">#BCE0FD</color>
+</resources>

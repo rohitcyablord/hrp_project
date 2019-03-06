@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height = "wrap_content"
+    android:background="@drawable/dialog_border"
+    tools:context=".PopUpMenu">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/back_color"
+        android:padding="@dimen/standard_layout_padding"
+        android:layout_margin="@dimen/standard_margin_size">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picid"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_person_blue_24dp"
+            android:layout_gravity="center"
+            app:civ_border_width="@dimen/standard_margin_size"
+            app:civ_border_color="@color/back"
+            app:civ_fill_color="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/usr_nm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sarita Jadhav"
+            android:layout_weight="0.01"
+            android:gravity="center"
+            android:textSize="@dimen/standard_text_size"
+            android:textColor="@color/text" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sarra@gmail.com"
+            android:layout_weight="0.01"
+            android:gravity="center"
+            android:textSize="@dimen/standard_text_size"
+            android:textColor="@color/text"
+            android:layout_margin="@dimen/standard_margin_size"/>
+
+        <LinearLayout
+            android:id="@+id/icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:padding="@dimen/standard_padding_size"
+            android:layout_margin="@dimen/standard_margin_size">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edt_id"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_edit_blue_24dp"
+                android:layout_gravity="center"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/text1"
+                app:civ_fill_color="@android:color/white"
+                android:layout_margin="@dimen/standard_margin_size" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/dlr_id"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_attach_money_blue_24dp"
+                android:layout_gravity="center"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/text1"
+                app:civ_fill_color="@android:color/white"
+                android:layout_margin="@dimen/standard_margin_size" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/lgot_id"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_exit_to_app_blue_24dp"
+                android:layout_gravity="center"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/text1"
+                app:civ_fill_color="@android:color/white"
+                android:layout_margin="@dimen/standard_margin_size"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin_size"
+            android:background="@color/back_color"
+            android:orientation="horizontal"
+            android:padding="@dimen/standard_layout_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin_size"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_padding_size">
+
+                <TextView
+                    android:id="@+id/usr_nm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/edit_usr_nm"
+                    android:textColor="@color/log"
+                    android:textSize="@dimen/standard_text_size" />
+
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/edit_usr_id"
+                    android:textColor="@color/log"
+                    android:textSize="@dimen/standard_text_size" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/edt_pro_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/bluebtn"
+                android:text="@string/edt_pro_amt"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/standard_text_size" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin_size"
+                android:background="@drawable/back"
+                android:hint="@string/add_follower_input1"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin_size"
+                android:background="@drawable/back"
+                android:hint="@string/add_follower_input4"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin_size"
+                android:background="@drawable/back"
+                android:hint="@string/add_follower_input5"
+                android:padding="@dimen/standard_input_padding"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_text_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/standard_margin_size"
+            android:background="@color/log"
+            android:padding="@dimen/standard_padding_size"
+            android:text="@string/btn_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standard_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin_size"
+            android:background="@color/back_color"
+            android:orientation="vertical"
+            android:padding="@dimen/standard_layout_padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_dtl_ttl"
+                android:textColor="@color/text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin_size"
+                android:orientation="horizontal"
+                android:padding="@dimen/standard_padding_size">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_more_horiz_blue_24dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_more_horiz_blue_24dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_more_horiz_blue_24dp" />
+
+                <TextView
+                    android:id="@+id/acc_lst_dgt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="@string/acc_lst_dgt"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/standard_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/standard_margin_size"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:padding="@dimen/standard_padding_size">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/standard_padding_size">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/acc_typ_txt"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/standard_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/acc_typ"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/standard_text_size" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/edt_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/bluebtn"
+                    android:text="@string/edt_btn_ttl"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/standard_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
