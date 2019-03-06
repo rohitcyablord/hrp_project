@@ -5,12 +5,12 @@
     android:layout_height = "match_parent"
     tools:context = ".Register">
 
-
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_margin="@dimen/standard_margin_size">
+        android:layout_margin="@dimen/standard_margin_size"
+        android:padding="@dimen/standard_padding_size">
 
         <ProgressBar
             android:id="@+id/loadingBar"
@@ -20,12 +20,11 @@
             android:layout_gravity="center"
             android:visibility="invisible"/>
 
-
         <TextView
             android:id="@+id/per_Details"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="Personal Details"
+            android:text="@string/activity_register_step1_text3"
             android:textAlignment="center"
             android:textColor="@color/log"
             android:textSize="@dimen/standard_heading_size"
@@ -33,7 +32,7 @@
 
         <Spinner
             android:id="@+id/sponsor_name"
-            android:tooltipText="Select user name"
+            android:tooltipText="@string/activity_registration_text4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/standard_padding_size"/>
@@ -45,7 +44,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/user_name"
-                android:hint="User Name"
+                android:hint="@string/usr_nm1"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:textColor="@color/text"
@@ -61,7 +60,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/contact_no"
-                android:hint="Mobile Number"
+                android:hint="@string/activity_register_mo_no"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:textColor="@color/text"
@@ -74,7 +73,7 @@
             android:id="@+id/bank_Details"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="Bank Details"
+            android:text="@string/bank_details"
             android:textAlignment="center"
             android:textColor="@color/log"
             android:textSize="@dimen/standard_heading_size"
@@ -166,7 +165,7 @@
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/title_activity_register"
         android:background="@color/log"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"

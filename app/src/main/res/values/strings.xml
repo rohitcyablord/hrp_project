@@ -26,6 +26,10 @@
     <string name="activity_register_step1_info3">OTP</string>
     <string name="activity_register_step1_text1">step 1/3</string>
     <string name="activity_register_step1_text2">Sponsor Details</string>
+    <string name="activity_register_step1_text3">Personal Details</string>
+    <string name="activity_registration_text4">Select user name</string>
+    <string name="activity_register_mo_no">Mobile Number</string>
+    <string name="bank_details">Bank Details</string>
 
     <!--register activity step 3 strings-->
     <string name="activity_register_text1">Complete Registration Process</string>
