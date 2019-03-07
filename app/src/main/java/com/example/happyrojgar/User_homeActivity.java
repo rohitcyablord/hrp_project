@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class User_home extends AppCompatActivity {
+public class User_homeActivity extends AppCompatActivity {
 
     private ImageView menu2;
     private CardView trans, topup;
@@ -50,7 +50,7 @@ public class User_home extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopUpMenu popUpMenu = new PopUpMenu();
+                PopUpMenuDialog popUpMenu = new PopUpMenuDialog();
                 popUpMenu.show(fm,"PopUpMenu");
             }
         });
@@ -61,7 +61,7 @@ public class User_home extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Sendhrp sendhrp = new Sendhrp();
+                SendhrpDialog sendhrp = new SendhrpDialog();
                 sendhrp.show(fm,"Sendhrp");
             }
         });
@@ -70,7 +70,7 @@ public class User_home extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Topup topup = new Topup();
+                TopupDialog topup = new TopupDialog();
                 topup.show(fm,"Topup");
 
             }
@@ -79,7 +79,7 @@ public class User_home extends AppCompatActivity {
         add_follower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AddFollower.class);
+                Intent intent = new Intent(getApplicationContext(), AddFollowerActivity.class);
                 startActivity(intent);
             }
         });

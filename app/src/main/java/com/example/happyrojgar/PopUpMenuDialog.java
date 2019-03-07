@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class PopUpMenu extends DialogFragment {
+public class PopUpMenuDialog extends DialogFragment {
 
     private CircleImageView cr1, cr2, cr3;
     private TextView usr_nm,usr_email;
 
-    public PopUpMenu() {
+    public PopUpMenuDialog() {
     }
 
     @Override
@@ -34,7 +34,7 @@ public class PopUpMenu extends DialogFragment {
 
         cr1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                Intent intent = new Intent(getContext(), EditProfile.class);
+                Intent intent = new Intent(getContext(), EditProfileActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class PopUpMenu extends DialogFragment {
         cr2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), CashOut.class);
+                Intent intent = new Intent(getContext(), CashOutActivity.class);
                 startActivity(intent);
             }
         });
