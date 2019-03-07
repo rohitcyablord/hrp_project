@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
 *.lock
 *.lock
 *.xml
+=======
+.idea/workspace.xml
+>>>>>>> 7774b4fc38b644aad4dddb88ae72ab9e04491fe0

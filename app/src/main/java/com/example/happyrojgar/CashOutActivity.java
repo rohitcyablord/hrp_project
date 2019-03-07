@@ -42,7 +42,7 @@ public class CashOutActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopUpMenu popUpMenu = new PopUpMenu();
+                PopUpMenuDialog popUpMenu = new PopUpMenuDialog();
                 popUpMenu.show(fm,"PopUpMenu");
             }
         });
@@ -53,18 +53,18 @@ public class CashOutActivity extends AppCompatActivity {
         edtbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditBankDetails edtBankDetails = new EditBankDetails();
+                EditBankDetailsDialog edtBankDetails = new EditBankDetailsDialog();
                 edtBankDetails.show(fm,"EditBankDetails");
             }
         });
 
-        menu2.setOnClickListener(new View.OnClickListener() {
+        /*menu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopUpMenu popUpMenu = new PopUpMenu();
+                PopUpMenuDialog popUpMenu = new PopUpMenuDialog();
                 popUpMenu.show(fm,"PopUpMenu");
             }
-        });
+        });*/
 
     }
 

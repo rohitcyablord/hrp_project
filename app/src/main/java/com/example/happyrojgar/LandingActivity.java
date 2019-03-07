@@ -40,7 +40,7 @@ public class LandingActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopUpMenu popUpMenu = new PopUpMenu();
+                PopUpMenuDialog popUpMenu = new PopUpMenuDialog();
                 popUpMenu.show(fm,"PopUpMenu");
             }
         });

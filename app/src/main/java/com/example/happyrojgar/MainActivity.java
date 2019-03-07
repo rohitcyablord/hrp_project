@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Login.class);
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 //intent.putExtra("abc","val");
                 startActivity(intent);
             }
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Register_step1.class);
+                Intent intent = new Intent(getApplicationContext(),RegisterationActivity.class);
                 startActivity(intent);
             }
         });
