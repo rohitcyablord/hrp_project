@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/LoginTheme">
-        <activity android:name=".RegisterationActivity"></activity>
+        <activity android:name=".Follower_ListActivity"></activity>
+        <activity android:name=".RegisterationActivity" />
         <activity
             android:name=".LandingActivity"
             android:screenOrientation="portrait"
