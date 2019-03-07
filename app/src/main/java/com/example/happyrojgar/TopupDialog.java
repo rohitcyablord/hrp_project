@@ -17,9 +17,7 @@ public class TopupDialog extends DialogFragment {
     private TextInputEditText acc_nm, usr_nm, amt, commision, pass;
     private Button btn;
 
-    public TopupDialog(){
-
-    }
+    public TopupDialog(){ }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
