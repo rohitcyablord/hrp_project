@@ -13,50 +13,67 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/LoginTheme">
-        <activity android:name=".Follower_ListActivity"></activity>
-        <activity android:name=".RegisterationActivity" />
+
+        <activity android:name=".Follower_ListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" ></activity>
+
+        <activity android:name=".RegisterationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme"/>
+
         <activity
             android:name=".LandingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".CashOutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".EditProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".AddFollowerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".User_homeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".Register_step1"
             android:label="@string/title_activity_register_step1"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".Register"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

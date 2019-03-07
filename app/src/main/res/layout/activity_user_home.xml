@@ -165,6 +165,7 @@
                     android:textColor="@color/log"
                     android:textSize="@dimen/standard_heading_size" />
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -316,8 +317,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
