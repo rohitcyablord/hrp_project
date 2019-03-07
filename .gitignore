@@ -1,9 +1,4 @@
 
-.idea/workspace.xml
-.gradle/4.10.1/fileContent/fileContent.lock
-.gradle/4.10.1/fileHashes/resourceHashesCache.bin
-.gradle/4.10.1/javaCompile/classAnalysis.bin
-.gradle/4.10.1/javaCompile/javaCompile.lock
-.gradle/4.10.1/javaCompile/taskHistory.bin
-app/.DS_Store
-app/.DS_Store
+*.lock
+*.lock
+*.xml

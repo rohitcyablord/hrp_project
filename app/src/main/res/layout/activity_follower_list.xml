@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Follower_ListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:padding="@dimen/standard_padding_size">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/back_color"
+                android:padding="@dimen/standard_padding_size"
+                android:layout_weight="0.5"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_usr_nm"
+                    android:textColor="@color/log"
+                    android:textSize="@dimen/standard_heading_size" />
+
+                <TextView
+                    android:id="@+id/user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_usr_id"
+                    android:textColor="@color/log" />
+
+            </LinearLayout>
+
+           <TextView
+               android:id="@+id/acc_balance"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="0.5"
+               android:text="1500"
+               android:background="@color/log"
+               android:padding="@dimen/standard_padding_size"
+               android:textColor="@android:color/white"
+               android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"
+            android:padding="@dimen/standard_padding_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st Level"
+            android:background="@color/back_color"
+            android:padding="@dimen/standard_padding_size"
+           android:layout_gravity="center" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#c0c0c0"
+            android:padding="@dimen/standard_padding_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_frag"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:padding="@dimen/standard_padding_size"
+            android:layout_margin="@dimen/standard_margin_size">
+
+            <TextView
+                android:id="@+id/follower_nm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_nm"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_heading_size" />
+
+            <TextView
+                android:id="@+id/follower_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_id"
+                android:textColor="@color/log" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_frag"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:padding="@dimen/standard_padding_size"
+            android:layout_margin="@dimen/standard_margin_size">
+
+            <TextView
+                android:id="@+id/follower_nm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_nm"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_heading_size" />
+
+            <TextView
+                android:id="@+id/follower_id1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_id"
+                android:textColor="@color/log" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_frag"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:padding="@dimen/standard_padding_size"
+            android:layout_margin="@dimen/standard_margin_size">
+
+            <TextView
+                android:id="@+id/follower_nm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_nm"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_heading_size" />
+
+            <TextView
+                android:id="@+id/follower_id2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_id"
+                android:textColor="@color/log" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_frag"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:padding="@dimen/standard_padding_size"
+            android:layout_margin="@dimen/standard_margin_size">
+
+            <TextView
+                android:id="@+id/follower_nm3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_nm"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_heading_size" />
+
+            <TextView
+                android:id="@+id/follower_id3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_id"
+                android:textColor="@color/log" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_frag"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:padding="@dimen/standard_padding_size"
+            android:layout_margin="@dimen/standard_margin_size">
+
+            <TextView
+                android:id="@+id/follower_nm4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_nm"
+                android:textColor="@color/log"
+                android:textSize="@dimen/standard_heading_size" />
+
+            <TextView
+                android:id="@+id/follower_id4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_usr_id"
+                android:textColor="@color/log" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
