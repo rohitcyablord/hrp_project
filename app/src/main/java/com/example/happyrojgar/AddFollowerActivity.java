@@ -43,7 +43,7 @@ public class AddFollowerActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopUpMenu popUpMenu = new PopUpMenu();
+                PopUpMenuDialog popUpMenu = new PopUpMenuDialog();
                 popUpMenu.show(fm1,"PopUpMenu");
             }
         });
