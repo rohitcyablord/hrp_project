@@ -3,10 +3,13 @@ package com.example.happyrojgar;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.TextInputEditText;
 
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +36,9 @@ public class LoginActivity extends AppCompatActivity {
     private JSONArray response;
     private Handler mHandler;
     private String TAG = "Login";
+    SharedPreferences sharedPreferences;
+    private FragmentManager fm;
+    private SharedPreferences.Editor editor;
 
 
     @Override
@@ -55,11 +61,12 @@ public class LoginActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
+        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        fm = getSupportFragmentManager();
         initializeViews();
         context = getApplicationContext();
         underdog = new Underdog(context);
-
+        mHandler = new Handler();
 
         /*b1.setOnClickListener(new View.OnClickListener() {
 
@@ -80,11 +87,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (!usernameString.equals("") && !passwordString.equals("")) {
                     lgn_btn.setEnabled(false);
-                    Intent intent = new Intent(getApplicationContext(), LandingActivity.class);
-                    startActivity(intent);
+                    Login(usernameString, passwordString);
+
                 } else {
                     if (usernameString.equals(""))
-                        email.setError("Email should not be empty!");
+                        email.setError("User name should not be empty!");
                     else if (passwordString.equals(""))
                         pass.setError("Password should not be empty!");
                 }
@@ -95,7 +102,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
-        //b1 = (ImageView) findViewById(R.id.Back);
         lgn_btn = (Button) findViewById(R.id.loginBtn);
         email = (TextInputEditText) findViewById(R.id.email);
         pass = (TextInputEditText) findViewById(R.id.password);
@@ -107,14 +113,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    private void Login(final String emailString, String passwordString) {
+    private void Login(final String usernameString, String passwordString) {
         JSONObject args = new JSONObject();
         //JSONObject host = new JSONObject();
         JSONObject parent = new JSONObject();
 
         try {
 
-            args.put("email", emailString);
+            args.put("userName", usernameString);
             args.put("password", passwordString);
             parent.put("function", "Login");
             parent.put("token", "");
@@ -133,18 +139,31 @@ public class LoginActivity extends AppCompatActivity {
                                 switch (response.getJSONObject(0).getString("response")) {
 
                                     case "true":
-                                        final String designation = response.getJSONObject(0).getJSONObject("emp_details").getString("employee_designation");
-                                        final String hotel_id = response.getJSONObject(0).getJSONObject("emp_details").getString("hotel_id");
-                                        final String employee_name = response.getJSONObject(0).getJSONObject("emp_details").getString("employee_name");
+                                        final String user_name = response.getJSONObject(0).getJSONObject("user_details").getString("user_name");
+                                        final String sponsor_uname = response.getJSONObject(0).getJSONObject("user_details").getString("sponsor_uname");
+                                        final String hrp = response.getJSONObject(0).getJSONObject("user_details").getString("hrp");
+                                        final String account_status = response.getJSONObject(0).getJSONObject("user_details").getString("account_status");
+                                        final String full_name = response.getJSONObject(0).getJSONObject("user_details").getJSONObject("personal_info").getString("full_name");
+                                        final String mobile_number = response.getJSONObject(0).getJSONObject("user_details").getJSONObject("personal_info").getString("mobile_number");
                                         final String token = response.getJSONObject(0).getString("tokenString");
 
                                         mHandler.post(new Runnable() {
                                             @Override
                                             public void run() {
                                                 Toast.makeText(context, "Login success !!!", Toast.LENGTH_SHORT).show();
-                                                //setSharedPreferences(designation,hotel_id,employee_name,token,emailString);
+                                                setSharedPreferences(user_name, sponsor_uname, hrp, account_status, full_name, mobile_number, token);
                                                 lgn_btn.setEnabled(true);
-                                                //passingIntent();
+                                                try {
+                                                    if (response.getJSONObject(0).getJSONObject("user_details").getJSONObject("bank_details").getString("account_number").equals("")) {
+                                                        BankDetailsDialog bankDetailsDialog = new BankDetailsDialog();
+                                                        bankDetailsDialog.show(fm,"BankDetailsDialog");
+                                                    } else {
+                                                        Intent intent = new Intent(getApplicationContext(), LandingActivity.class);
+                                                        startActivity(intent);
+                                                    }
+                                                } catch (JSONException e) {
+                                                    e.printStackTrace();
+                                                }
                                             }
                                         });
 
@@ -200,5 +219,17 @@ public class LoginActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    private void setSharedPreferences(String user_name, String sponsor_uname, String hrp, String account_status, String full_name, String mobile_number, String token) {
+        editor = sharedPreferences.edit();
+        editor.putString("userName", user_name);
+        editor.putString("sponsorUname", sponsor_uname);
+        editor.putString("hrp", hrp);
+        editor.putString("token", token);
+        editor.putString("fullName", full_name);
+        editor.putString("mobileNumber", mobile_number);
+        editor.putString("accountStatus", account_status);
+        editor.apply();
     }
 }

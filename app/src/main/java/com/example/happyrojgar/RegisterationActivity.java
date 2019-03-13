@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -28,8 +29,10 @@ import java.util.Objects;
 public class RegisterationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private ImageView back_arrow;
     private Context context;
-    private Button cnf_btn;
-    private TextInputEditText nm_of_sponsor,email_of_sponsor, otp;
+    private Button register_btn;
+    private LinearLayout bank_details_lay;
+    private TextView bank_Details_label;
+    private TextInputEditText name_on_acc,account_number,confirm_acc_number,ifs_code,user_name,contact_no,fullname;
     private ArrayList<String> sponsorsList;
     private ArrayList<String> sponsorsId;
     private Spinner sponsorNamesSpinner;
@@ -60,7 +63,7 @@ public class RegisterationActivity extends AppCompatActivity implements AdapterV
                 onBackPressed();
             }
         });
-        context = getApplicationContext();
+        this.context = getApplicationContext();
         underdog = new Underdog(context);
         mHandler = new Handler();
 
@@ -75,15 +78,134 @@ public class RegisterationActivity extends AppCompatActivity implements AdapterV
 //        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 //        //Setting the ArrayAdapter data on the Spinner
 //        sponsorNamesSpinner.setAdapter(aa);
-
-
         sponsorNamesSpinner.setOnItemSelectedListener(this);
+
+        bank_Details_label.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (bank_details_lay.getVisibility() == View.VISIBLE){
+                    bank_details_lay.setVisibility(View.INVISIBLE);
+                }else{
+                    bank_details_lay.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        register_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validateFields()){
+                    RegisterUser();
+                }else{
+                    Toast.makeText(context,"Invalid",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void initialiseViews(){
+
         sponsorNamesSpinner = (Spinner) findViewById(R.id.sponsor_name);
-        cnf_btn = (Button)findViewById(R.id.register_btn);
+        user_name = (TextInputEditText) findViewById(R.id.user_name);
+        fullname = (TextInputEditText) findViewById(R.id.fullname);
+        name_on_acc = (TextInputEditText)findViewById(R.id.name_on_acc);
+        contact_no = (TextInputEditText)findViewById(R.id.contact_no);
+        account_number = (TextInputEditText)findViewById(R.id.account_number);
+        confirm_acc_number = (TextInputEditText)findViewById(R.id.confirm_acc_number);
+        ifs_code = (TextInputEditText)findViewById(R.id.ifs_code);
+        register_btn = (Button)findViewById(R.id.register_btn);
         mProgressBar = (ProgressBar)findViewById(R.id.loadingBar);
+        bank_details_lay = (LinearLayout)findViewById(R.id.bank_details_lay);
+        bank_Details_label = (TextView) findViewById(R.id.bank_Details_label);
+
+    }
+
+    private void RegisterUser(){
+        JSONObject args = new JSONObject();
+        JSONObject parent = new JSONObject();
+        try {
+            args.put("sponsorUName",sponsorsList.get(sponsorNamesSpinner.getSelectedItemPosition()));
+            //args.put("sponsorId",sponsorsId.get(sponsorNamesSpinner.getSelectedItemPosition()));
+            args.put("userName",String.valueOf(user_name.getText()));
+            args.put("fullName",String.valueOf(fullname.getText()));
+            args.put("nameOnAccount",String.valueOf(name_on_acc.getText()));
+            args.put("accountNumber",String.valueOf(account_number.getText()));
+            args.put("mobileNumber",String.valueOf(contact_no.getText()));
+            args.put("ifsCode",String.valueOf(ifs_code.getText()));
+            parent.put("function", "AddUserDetails");
+//          parent.put("token", sharedPreferences.getString("token", ""));
+            parent.put("token","");
+            parent.put("args", args);
+            response = underdog.HttpCaller(parent, mProgressBar);
+            Log.w(TAG, String.valueOf(response));
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        if (response != null) {
+                            if (response.getJSONObject(0).getString("errInResponse").equals("")) {
+                                switch (response.getJSONObject(0).getString("response")) {
+
+                                    case "true":
+                                        mHandler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Toast.makeText(context, "User register successfully !!!", Toast.LENGTH_SHORT).show();
+                                                register_btn.setEnabled(true);
+                                                //finish();
+                                            }
+                                        });
+
+                                        break;
+                                    case "false":
+                                        mHandler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                register_btn.setEnabled(true);
+                                                Toast.makeText(context, "Failed to register user!!!", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                        break;
+                                    default:
+                                        mHandler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                register_btn.setEnabled(true);
+                                                Toast.makeText(context, "Something went wrong,Try again !!!", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                        break;
+                                }
+                            } else {
+                                mHandler.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        register_btn.setEnabled(true);
+                                        //Log.e(TAG, response.getJSONObject(0).getString("errInResponse"));
+                                        Toast.makeText(context, "Try again !!!", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
+                            }
+                        } else {
+                            mHandler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    register_btn.setEnabled(true);
+                                    Toast.makeText(context, "Response is null ", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     private void GetSponsorList() {
@@ -125,7 +247,7 @@ public class RegisterationActivity extends AppCompatActivity implements AdapterV
                                                         }
                                                         //categoryData.add(pmcl);
                                                     }
-                                                    ArrayAdapter aa = new ArrayAdapter(context, android.R.layout.simple_spinner_item, sponsorsList);
+                                                    ArrayAdapter aa = new ArrayAdapter(getBaseContext(),android.R.layout.simple_spinner_item, sponsorsList);
                                                     aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                                                     //Setting the ArrayAdapter data on the Spinner
                                                     sponsorNamesSpinner.setAdapter(aa);
@@ -197,6 +319,10 @@ public class RegisterationActivity extends AppCompatActivity implements AdapterV
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    private boolean validateFields(){
+        return true;
     }
 
     @Override

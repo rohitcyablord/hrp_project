@@ -128,4 +128,6 @@
     <string name="trans_hrp">Transfer HRP</string>
     <string name="balance_1">Balance</string>
     <string name="bal_amt">1500 hrp</string>
+    <string name="fullname_hint">Full Name</string>
+    <string name="update_hint">Update</string>
 </resources>

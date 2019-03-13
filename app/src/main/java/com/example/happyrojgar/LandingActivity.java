@@ -1,6 +1,8 @@
 package com.example.happyrojgar;
 
 import android.app.ActionBar;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,10 @@ import java.util.Objects;
 public class LandingActivity extends AppCompatActivity {
 
     private FragmentManager fm;
+    private SharedPreferences sharedPreferences;
+    private String TAG = "LandingActivity";
+    private SharedPreferences.Editor editor;
+    private TextView fullName_text,userName_text,sponsor_name,balance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,5 +50,20 @@ public class LandingActivity extends AppCompatActivity {
                 popUpMenu.show(fm,"PopUpMenu");
             }
         });
+        InitialiseViews();
+
+        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        userName_text.setText(sharedPreferences.getString("userName",""));
+        fullName_text.setText(sharedPreferences.getString("fullName",""));
+        sponsor_name.setText(sharedPreferences.getString("sponsorUname",""));
+        balance.setText(sharedPreferences.getString("hrp",""));
+
+    }
+
+    private void InitialiseViews(){
+        fullName_text = (TextView) findViewById(R.id.fullName_text);
+        userName_text = (TextView) findViewById(R.id.userName_text);
+        sponsor_name = (TextView) findViewById(R.id.sponsor_name);
+        balance = (TextView) findViewById(R.id.balance);
     }
 }
