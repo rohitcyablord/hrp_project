@@ -13,7 +13,8 @@ import android.widget.TextView;
 import java.util.Objects;
 
 public class LandingActivity extends AppCompatActivity {
-
+    private TextView transactionHistory, addFollower;
+    private ImageView transferHrp, topUp;
     private FragmentManager fm;
     private SharedPreferences sharedPreferences;
     private String TAG = "LandingActivity";
