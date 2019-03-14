@@ -26,7 +26,7 @@ public class TopupDialog extends DialogFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_pop_up_menu, container, false);
+        View v = inflater.inflate(R.layout.fragment_topup, container, false);
         initializeViews(v);
         return v;
     }

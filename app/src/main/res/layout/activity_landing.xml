@@ -46,11 +46,11 @@
         android:orientation="vertical">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/back_color">
 
             <TextView
                 android:layout_width="0dp"
@@ -104,7 +104,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/back_color">
 
             <TextView
                 android:layout_width="0dp"
@@ -161,7 +162,8 @@
         android:layout_below="@+id/follower_level_wise_lay"
         android:layout_margin="5dp"
         android:orientation="vertical"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:background="@color/back_color">
 
         <TextView
             android:layout_width="match_parent"

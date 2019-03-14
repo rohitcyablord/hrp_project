@@ -8,6 +8,7 @@
     <string name="edit_profile_title">Edit Profile</string>
     <string name="title">Home</string>
     <string name="title_menu_btn">Add Follower</string>
+
     <!--landing_page strings-->
     <string name="home1">Spread </string>
     <string name="home11">Happiness</string>
@@ -128,4 +129,13 @@
     <string name="trans_hrp">Transfer HRP</string>
     <string name="balance_1">Balance</string>
     <string name="bal_amt">1500 hrp</string>
+
+
+    <!--transaction history -->
+    <string name="transaction_tab1">ALL</string>
+    <string name="transaction_tab2">OUTGOING</string>
+    <string name="transaction_tab3">INCOMING</string>
+    <string name="transaction_usernm">Sarita Jadhav</string>
+    <string name="transaction_dt">12 Jan 2019</string>
+    <string name="transaction_amt">1500</string>
 </resources>

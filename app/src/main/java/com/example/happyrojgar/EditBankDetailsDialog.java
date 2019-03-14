@@ -16,6 +16,7 @@ public class EditBankDetailsDialog extends DialogFragment {
     private TextInputEditText nm_of_acc, acc_no,cnf_acc_no, ifsc, pass;
     private TextView hrp_amt;
     private Button btn1;
+    private String NameOnAccount ;
 
     public EditBankDetailsDialog() {
         // Required empty public constructor
@@ -24,13 +25,19 @@ public class EditBankDetailsDialog extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_bank_details, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_edit_bank_details, container, false);
+        initializeViews(v);
+        nm_of_acc.setText(R.string.acc_nm);
+        nm_of_acc.setSelection(nm_of_acc.getText().length());
+        return v;
     }
 
     private void initializeViews(View v) {
