@@ -57,7 +57,6 @@
 
                 </android.support.design.widget.TextInputLayout>
 
-
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,34 +73,7 @@
                         android:textSize="@dimen/standard_text_size" />
 
                 </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/back_color">
-
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/fullname"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/fullname_hint"
-                        android:inputType="text"
-                        android:padding="@dimen/standard_input_padding"
-                        android:textColor="@color/text"
-                        android:textSize="@dimen/standard_text_size" />
-
-                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/bank_Details_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/standard_padding_size"
-                android:text="@string/bank_details"
-                android:textAlignment="center"
-                android:textColor="@color/log"
-                android:textSize="@dimen/standard_heading_size" />
 
             <LinearLayout
                 android:id="@+id/bank_details_lay"
@@ -110,13 +82,23 @@
                 android:layout_weight="0.75"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/bank_Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/standard_padding_size"
+                    android:text="@string/bank_details"
+                    android:textAlignment="center"
+                    android:textColor="@color/log"
+                    android:textSize="@dimen/standard_heading_size" />
+
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/back_color">
 
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/name_on_acc"
+                        android:id="@+id/info1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/activity_register_info1"
@@ -127,6 +109,22 @@
 
                 </android.support.design.widget.TextInputLayout>
 
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/back_color">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/info2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/activity_register_info2"
+                        android:inputType="text"
+                        android:padding="@dimen/standard_input_padding"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/standard_text_size" />
+
+                </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -134,7 +132,7 @@
                     android:background="@color/back_color">
 
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/account_number"
+                        android:id="@+id/info3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/activity_register_info3"
@@ -151,7 +149,7 @@
                     android:background="@color/back_color">
 
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/confirm_acc_number"
+                        android:id="@+id/info4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/activity_register_info4"
@@ -168,7 +166,7 @@
                     android:background="@color/back_color">
 
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/ifs_code"
+                        android:id="@+id/info5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/activity_register_info5"

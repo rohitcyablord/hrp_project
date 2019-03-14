@@ -42,7 +42,7 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/info1"
                     android:hint="@string/edt_acc_nm"
-                    android:text="@string/acc_nm"
+
                     style="@style/basic"
                     android:textColor="@color/text"
                     android:padding="@dimen/standard_input_padding"

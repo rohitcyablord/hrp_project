@@ -29,7 +29,7 @@ public class HTTPRequestHandler extends AsyncTask<JSONObject, Void, String> {
     private static final String REQUEST_METHOD = "POST";
     private static final int READ_TIMEOUT = 15000;
     private static final int CONNECTION_TIMEOUT = 15000;
-    private static final String Base_url = "http://192.168.0.7:7825/bin/interceptor";
+    private static final String Base_url = "http://192.168.0.9:7825/bin/interceptor";
     private String boundary;
     private static final String LINE_FEED = "\r\n";
     private String charset;

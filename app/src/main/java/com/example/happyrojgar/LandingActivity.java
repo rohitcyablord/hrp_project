@@ -1,8 +1,7 @@
 package com.example.happyrojgar;
 
 import android.app.ActionBar;
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,10 +15,6 @@ public class LandingActivity extends AppCompatActivity {
     private TextView transactionHistory, addFollower;
     private ImageView transferHrp, topUp;
     private FragmentManager fm;
-    private SharedPreferences sharedPreferences;
-    private String TAG = "LandingActivity";
-    private SharedPreferences.Editor editor;
-    private TextView fullName_text,userName_text,sponsor_name,balance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +46,50 @@ public class LandingActivity extends AppCompatActivity {
                 popUpMenu.show(fm,"PopUpMenu");
             }
         });
-        InitialiseViews();
 
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        userName_text.setText(sharedPreferences.getString("userName",""));
-        fullName_text.setText(sharedPreferences.getString("fullName",""));
-        sponsor_name.setText(sharedPreferences.getString("sponsorUname",""));
-        balance.setText(sharedPreferences.getString("hrp",""));
+        initializeViews();
+
+        transferHrp.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                SendhrpDialog sendhrp = new SendhrpDialog();
+                sendhrp.show(fm,"Sendhrp");
+            }
+        });
+
+
+        topUp.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                TopupDialog TopupDialog = new TopupDialog();
+                TopupDialog.show(fm,"TopupDialog");
+            }
+        });
+
+        addFollower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RegisterationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        transactionHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TransactionHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
-    private void InitialiseViews(){
-        fullName_text = (TextView) findViewById(R.id.fullName_text);
-        userName_text = (TextView) findViewById(R.id.userName_text);
-        sponsor_name = (TextView) findViewById(R.id.sponsor_name);
-        balance = (TextView) findViewById(R.id.balance);
+    public void initializeViews(){
+        transferHrp = (ImageView)findViewById(R.id.transfer_hrp_icon);
+        topUp = (ImageView)findViewById(R.id.topup_icon);
+        transactionHistory = (TextView)findViewById(R.id.transaction_history);
+        addFollower = (TextView)findViewById(R.id.add_follwer);
     }
 }

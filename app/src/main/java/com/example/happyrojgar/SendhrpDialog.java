@@ -27,7 +27,7 @@ public class SendhrpDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_pop_up_menu, container, false);
+        View v = inflater.inflate(R.layout.fragment_send_hrp, container, false);
         initializeViews(v);
         return v;
 
