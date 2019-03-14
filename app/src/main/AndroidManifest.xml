@@ -14,10 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/LoginTheme">
 
-        <activity
-            android:name=".TransactionHistoryActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/CustomTheme"/>
 
         <activity
             android:name=".Follower_ListActivity"
